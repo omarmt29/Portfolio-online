@@ -24,9 +24,9 @@ function App() {
 
   return (
     <>
-      <header className="max-w-3xl py-6 m-auto dark:text-white w-full flex justify-end">
+      <header className="max-w-3xl py-6 m-auto  dark:text-white relative w-full ">
 
-        <button className="text-3xl" onClick={toggleDarkMode}><FaRegMoon /></button>
+        <button className="text-3xl  fixed top-0 right-0 px-6 mt-4" onClick={toggleDarkMode}><FaRegMoon /></button>
 
       </header>
       <div className="main w-full sm:max-w-3xl m-auto">

@@ -33,12 +33,12 @@ function App() {
 
         <main className="px-4 sm:px-0 pt-25 pb-20">
 
-          <div className="flex items-center flex-col sm:flex-row gap-10 py-10 ">
-            <img className="w-40 h-40 object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://res.cloudinary.com/practicaldev/image/fetch/s--V0ekZaVJ--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/h68x0up43hmknl5tjcww.jpg" alt="" />
+          <div className="flex items-center flex-col sm:flex-row gap-10 pt-6 pb-4 sm:py-10 ">
+            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://res.cloudinary.com/practicaldev/image/fetch/s--V0ekZaVJ--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/h68x0up43hmknl5tjcww.jpg" alt="" />
             <div>
               <h2 className="mb-2 text-3xl text-purple-500 font-semibold">Omar Méndez Torres</h2>
               <p className="text-black/80 text-sm dark:text-white/70 max-w-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quod ab doloremque nesciunt? Dicta, fuga autem.</p>
-              <div className="pt-10 flex items-center gap-6">
+              <div className="pt-5 sm:pt-10 flex items-center gap-6">
                 <ButtonHead size='text-1xl' color={'bg-purple-400 text-white'} icon={<FaGithub />} text='Github' />
                 <ButtonHead size='text-1xl' color={'bg-orange-400 text-white'} icon={<FaUserTie />} text='Cv' />
               </div>

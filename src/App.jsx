@@ -147,7 +147,7 @@ function App() {
                     <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
                     <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
                   </div>
-                  <a href="https://novalproperties.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='text-xs' text='Live' icon={<FaLink />} /></a>
+                  <a href="https://novalproperties.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 
@@ -166,7 +166,7 @@ function App() {
                     <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
                     <img src="/magic.png" className="w-12 h-12 pb-2 object-contain" alt="" />
                   </div>
-                  <a href="https://novalproperties.com/es/noval-awards" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='text-xs' text='Live' icon={<FaLink />} /></a>
+                  <a href="https://novalproperties.com/es/noval-awards" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 
@@ -183,7 +183,7 @@ function App() {
                     <img src="/supabase.png" className="w-18 h-8 object-contain" alt="" />
                     <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-8 h-8  object-contain" alt="" />
                   </div>
-                  <a href="https://turistapp.netlify.app/auth/signin"><ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='text-xs' text='Live' icon={<FaLink />} /></a>
+                  <a href="https://turistapp.netlify.app/auth/signin"><ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
 
                 </div>
               </div>

@@ -30,9 +30,9 @@ function App() {
           <div className="flex items-center flex-col sm:flex-row gap-10 pt-6 pb-4 sm:py-10 ">
             <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="avatar.webp" alt="" />
             <div>
-              <h2 className="mb-2 text-3xl text-purple-500 font-semibold">Omar Méndez Torres</h2>
-              <p className="text-black/80 text-lg dark:text-white max-w-lg">A passionate frontend developer from Dominican republic 📍</p>
-              <div className="pt-5 sm:pt-10 flex items-center gap-6">
+              <h2 className="mb-2 text-3xl text-purple-500 font-semibold text-center sm:text-start">Omar Méndez Torres</h2>
+              <p className="text-black/80 text-lg dark:text-white max-w-lg text-center sm:text-start">A passionate frontend developer from Dominican republic 📍</p>
+              <div className="pt-5 sm:pt-10 flex items-center gap-6 justify-center sm:justify-start">
                 <a target="_blank" href="https://github.com/omarmt29"><ButtonHead size='text-1xl' color={'bg-purple-400 text-white'} icon={<FaGithub />} text='Github' /></a>
                 <a target="_blank" href={cv}><ButtonHead size='text-1xl' color={'bg-orange-400 text-white'} icon={<FaUserTie />} text='Cv' /></a>
               </div>

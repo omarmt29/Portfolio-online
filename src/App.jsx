@@ -2,16 +2,10 @@ import { useEffect, useState } from "react";
 import { FaGithub, FaUserTie, FaRegMoon, FaSuitcase, FaRocket, FaGears, FaRegCalendarCheck, FaLink } from "react-icons/fa6";
 import { ButtonHead } from '../src/components/ButtonHead'
 import { MagicMotion } from "react-magic-motion";
-
+import cv from "../public/omarCv-v2.pdf"
 function App() {
 
   const [darkMode, setDarkMode] = useState(true);
-  const [areGoalsShowing, setAreGoalsShowing] = useState(true);
-
-  useEffect(() => {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    setDarkMode(isDarkMode);
-  }, []);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
@@ -34,13 +28,13 @@ function App() {
         <main className="px-4 sm:px-0 pt-25 pb-20">
 
           <div className="flex items-center flex-col sm:flex-row gap-10 pt-6 pb-4 sm:py-10 ">
-            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://res.cloudinary.com/practicaldev/image/fetch/s--V0ekZaVJ--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/h68x0up43hmknl5tjcww.jpg" alt="" />
+            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="avatar.webp" alt="" />
             <div>
               <h2 className="mb-2 text-3xl text-purple-500 font-semibold">Omar Méndez Torres</h2>
-              <p className="text-black/80 text-sm dark:text-white/70 max-w-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus quod ab doloremque nesciunt? Dicta, fuga autem.</p>
+              <p className="text-black/80 text-sm dark:text-white/70 max-w-lg">A passionate frontend developer from Dominican republic 📍</p>
               <div className="pt-5 sm:pt-10 flex items-center gap-6">
-                <ButtonHead size='text-1xl' color={'bg-purple-400 text-white'} icon={<FaGithub />} text='Github' />
-                <ButtonHead size='text-1xl' color={'bg-orange-400 text-white'} icon={<FaUserTie />} text='Cv' />
+                <a target="_blank" href="https://github.com/omarmt29"><ButtonHead size='text-1xl' color={'bg-purple-400 text-white'} icon={<FaGithub />} text='Github' /></a>
+                <a target="_blank" href={cv}><ButtonHead size='text-1xl' color={'bg-orange-400 text-white'} icon={<FaUserTie />} text='Cv' /></a>
               </div>
             </div>
           </div>
@@ -153,8 +147,7 @@ function App() {
                     <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
                     <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
                   </div>
-                  
-                  <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='text-xs' text='Live' icon={<FaLink />} />
+                  <a href="https://novalproperties.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='text-xs' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 
@@ -173,11 +166,10 @@ function App() {
                     <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
                     <img src="/magic.png" className="w-12 h-12 pb-2 object-contain" alt="" />
                   </div>
-                  <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='text-xs' text='Live' icon={<FaLink />} />
-
+                  <a href="https://novalproperties.com/es/noval-awards" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='text-xs' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
-              
+
               <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
                 <div className="w-full h-40">
                   <img className=" rounded-md object-cover w-full h-full  border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/turistapp3.png" alt="" />
@@ -201,7 +193,7 @@ function App() {
 
 
             </div>
-           
+
 
           </div>
 

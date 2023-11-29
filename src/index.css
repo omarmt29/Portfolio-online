@@ -9,3 +9,26 @@
 body{
   background: linear-gradient(90deg, rgb(234 224 243 / 55%) 0%, rgb(255 255 255) 21%, rgba(240, 211, 48, 0.09) 48%, rgb(255 255 255) 86%, rgb(220 211 230 / 55%) 101%);
 }
+
+@keyframes show {
+	from {
+		opacity: 0;
+		scale: 25%;
+	}
+
+	to {
+		opacity: 1;
+		scale: 100%;
+	}
+}
+
+img {
+	view-timeline-name: --image;
+	view-timeline-axis: block;
+
+	animation-timeline: --image;
+	animation-name: show;
+
+	animation-range: entry 25% cover 30%;
+	animation-fill-mode: both;
+}

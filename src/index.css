@@ -22,7 +22,7 @@ body{
 	}
 }
 
-img {
+img, .form {
 	view-timeline-name: --image;
 	view-timeline-axis: block;
 

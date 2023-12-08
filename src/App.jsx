@@ -229,14 +229,14 @@ function App() {
                       <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                         <form ref={form} onSubmit={sendEmail} >
                           <div class="relative mb-8">
-                            <input autocomplete="off" id="email" name="email" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 bg-white/90 rounded-lg pl-3" placeholder="Email address" />
-                            <label for="email" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-6 peer-focus:pl-0 peer-focus:text-gray-600 pl-3 peer-focus:text-sm">Email Address</label>
+                            <input autocomplete="off" id="email" name="email" type="text" class="focus:bg-purple-800 focus:text-white peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 bg-white/90 rounded-lg pl-3" placeholder="Email address" />
+                            <label for="email" class="absolute left-3 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-6 peer-focus:pl-0 peer-focus:text-gray-600  peer-focus:text-sm">Email Address</label>
                           </div>
                           <div class="relative">
-                            <textarea autocomplete="off" id="message" name="message" class="peer placeholder-transparent h-28  w-full border-b-2 border-gray-300 text-gray-900 bg-white/90 rounded-lg focus:outline-none focus:borer-rose-600 pl-3" placeholder="Password" />
-                            <label for="message" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-6 peer-focus:pl-0 pl-3 peer-focus:text-gray-600 peer-focus:text-sm">Message</label>
+                            <textarea autocomplete="off" id="message" name="message" class=" py-2 focus:bg-purple-800 focus:text-white peer placeholder-transparent h-28  w-full border-b-2 border-gray-300 text-gray-900 bg-white/90 rounded-lg focus:outline-none focus:borer-rose-600 pl-3" placeholder="Password" />
+                            <label for="message" class="absolute left-3 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-6 peer-focus:pl-0  peer-focus:text-gray-600 peer-focus:text-sm">Message</label>
                           </div>
-                          <div class="relative flex justify-center">
+                          <div class="relative flex justify-center mt-8 sm:mt-4">
                             <button class="bg-white text-black hover:scale-110 transition-all ease-in rounded-md px-4 text-xl font-semibold py-1">Send</button>
                           </div>
                         </form>

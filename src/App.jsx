@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaGithub, FaUserTie, FaRegMoon, FaSuitcase, FaRocket, FaGears, FaRegCalendarCheck, FaLink, FaPaperPlane } from "react-icons/fa6";
+import { FaGithub, FaUserTie, FaRegMoon, FaSuitcase, FaRocket, FaGears, FaRegCalendarCheck, FaLink, FaPaperPlane, FaCircleCheck  } from "react-icons/fa6";
 import { ButtonHead } from '../src/components/ButtonHead'
 import cv from "../public/omarCv-v2.pdf"
 import emailjs from '@emailjs/browser';
@@ -10,18 +10,34 @@ function App() {
 
   const [darkMode, setDarkMode] = useState(true);
   const form = useRef();
+  const [isChecked, setIsChecked] = useState(false);
+  const [data, setdata] = useState({ email: '', message: '' })
+
 
   const sendEmail = (e) => {
     e.preventDefault();
     // service_id, templte_id and public key will get from Emailjs website when you create account and add template service and email service 
-    emailjs.sendForm('service_6asee9h', 'template_n2xeigm', form.current,
-      'PRMD9SU60NX1m1aPz')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
+    console.log(data.email.length)
+    if (data.email.length == 0 || data.message.length == 0) {
+      alert('Por favor, completa los campos')
+    } else {
+      emailjs.sendForm('service_6asee9h', 'template_n2xeigm', form.current,
+        'PRMD9SU60NX1m1aPz')
+        .then((result) => {
+          setIsChecked(true);
+
+          // Restablecer isChecked después de un tiempo para permitir múltiples clics
+          setTimeout(() => {
+            setIsChecked(false);
+            setdata({ email: '', message: '' }); 
+          }, 1500);
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+    }
   };
+
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
@@ -228,12 +244,13 @@ function App() {
                     <div class="divide-y divide-gray-200">
                       <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
                         <form ref={form} onSubmit={sendEmail} >
+                          {isChecked && <div className="check-animation"><FaCircleCheck className="text-green-300 text-[150px]" /></div>}
                           <div class="relative mb-8">
-                            <input autocomplete="off" id="email" name="email" type="text" class="focus:bg-purple-800 focus:text-white peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 bg-white/90 rounded-lg pl-3" placeholder="Email address" />
+                            <input value={data.email} autocomplete="off" onChange={e => setdata({ ...data, email: e.target.value })} id="email" name="email" type="text" class="focus:bg-purple-800 focus:text-white peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 bg-white/90 rounded-lg pl-3" placeholder="Email address" />
                             <label for="email" class="absolute left-3 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-6 peer-focus:pl-0 peer-focus:text-gray-600  peer-focus:text-sm">Email Address</label>
                           </div>
                           <div class="relative">
-                            <textarea autocomplete="off" id="message" name="message" class=" py-2 focus:bg-purple-800 focus:text-white peer placeholder-transparent h-28  w-full border-b-2 border-gray-300 text-gray-900 bg-white/90 rounded-lg focus:outline-none focus:borer-rose-600 pl-3" placeholder="Password" />
+                            <textarea value={data.message} onChange={e => setdata({ ...data, message: e.target.value })} autocomplete="off" id="message" name="message" class=" py-2 focus:bg-purple-800 focus:text-white peer placeholder-transparent h-28  w-full border-b-2 border-gray-300 text-gray-900 bg-white/90 rounded-lg focus:outline-none focus:borer-rose-600 pl-3" placeholder="Password" />
                             <label for="message" class="absolute left-3 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-6 peer-focus:pl-0  peer-focus:text-gray-600 peer-focus:text-sm">Message</label>
                           </div>
                           <div class="relative flex justify-center mt-8 sm:mt-4">

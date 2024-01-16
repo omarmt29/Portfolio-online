@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaUserTie, FaRegMoon, FaSuitcase, FaRocket, FaGears, FaRegCalendarCheck, FaLink, FaPaperPlane, FaCircleCheck  } from "react-icons/fa6";
 import { ButtonHead } from '../src/components/ButtonHead'
-import cv from "../public/omarCv-v2.pdf"
+import cv from "../public/omarcv-5.pdf"
 import emailjs from '@emailjs/browser';
 import React, { useRef } from 'react';
 
@@ -60,7 +60,7 @@ function App() {
         <main className="px-4 sm:px-0 pt-25 pb-20">
 
           <div className="flex items-center flex-col sm:flex-row gap-10 pt-6 pb-4 sm:py-10 ">
-            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="avatar.webp" alt="" />
+            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://avatars.githubusercontent.com/u/66282767?v=4" alt="" />
             <div>
               <h2 className="mb-2 text-3xl text-purple-500 font-semibold text-center sm:text-start">Omar Méndez Torres</h2>
               <p className="text-black/80 text-lg dark:text-white max-w-lg text-center sm:text-start">A passionate frontend developer from Dominican republic ✨</p>

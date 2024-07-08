@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaUserTie, FaRegMoon, FaSuitcase, FaRocket, FaGears, FaRegCalendarCheck, FaLink, FaPaperPlane, FaCircleCheck } from "react-icons/fa6";
 import { ButtonHead } from '../src/components/ButtonHead'
-import cv from "../public/omarcv-5.pdf"
+import cv from "../public/cv-omar2.pdf"
 import emailjs from '@emailjs/browser';
 import React, { useRef } from 'react';
 

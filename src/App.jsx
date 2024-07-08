@@ -131,6 +131,11 @@ function App() {
               <ul className="flex list-disc flex-col pl-8 mt-3 gap-3">
                 <li className="dark:text-white/80">
                   <p className="text-sm">
+                  I am an expert in WordPress with extensive experience in creating <span className="dark:text-yellow-400 text-yellow-600 font-semibold">custom plugins</span>, <span className="dark:text-yellow-400 text-yellow-600 font-semibold">custom templates</span>, and advanced theme customization. I proficiently use PHP and JavaScript to develop bespoke functionalities and utilize tools like <span className="dark:text-yellow-400 text-yellow-600 font-semibold">ACF (Advanced Custom Fields)</span> and WooCommerce to extend WordPress capabilities. Additionally, I am well-versed in performance optimization and security, ensuring that websites are scalable and secure.
+                  </p>
+                </li>
+                <li className="dark:text-white/80">
+                  <p className="text-sm">
                     Web Application Development: Proficiency in various programming languages <span className="dark:text-yellow-400 text-yellow-600 font-semibold">(Php and JavaScript)</span>, frameworks and librarys <span className="dark:text-yellow-400 text-yellow-600 font-semibold">(React, Laravel, tailwind, boostrap, etc..)</span>, and databases / API Cloud Services <span className="dark:text-yellow-400 text-yellow-600 font-semibold">(Mysql and Supabase)</span> for creating scalable and functional web applications.
                   </p>
                 </li>
@@ -162,8 +167,33 @@ function App() {
 
             </div>
 
+        
+
 
             <div className="mt-8 gap-16 grid grid-cols-3 ">
+
+
+              <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
+                <div className="w-full h-40">
+                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/canino.png" alt="" />
+                </div>
+                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
+                  <h3 className="dark:text-white font-semibold">Il Canino Pet Spa</h3>
+                  <p className="dark:text-white/60 text-xs">Il Canino se compromete a ofrecer servicios personalizados de peluquería y veterinaria, promoviendo la salud y el bienestar de nuestros amigos de cuatro patas.</p>
+                  <a href="https://ilcaninopetspa.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                </div>
+              </div>
+
+              <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
+                <div className="w-full h-40">
+                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/training.png" alt="" />
+                </div>
+                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
+                  <h3 className="dark:text-white font-semibold">Training With Stella</h3>
+                  <p className="dark:text-white/60 text-xs">Entrena a tu perro hoy para disfrutar de una vida juntos llena de felicidad</p>
+                  <a href="https://trainingwithstella.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                </div>
+              </div>
 
               <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
                 <div className="w-full h-40">
@@ -175,7 +205,7 @@ function App() {
                   <div className="flex gap-2 mb-2 mt-3">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
                     <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
-                    <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" />
+                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" /> */}
                     <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
                     <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
                   </div>
@@ -185,20 +215,20 @@ function App() {
 
               <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
                 <div className="w-full h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/noval-awards.png" alt="" />
+                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/academy.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">Noval Awards</h3>
+                  <h3 className="dark:text-white font-semibold">Noval Academy</h3>
                   <p className="dark:text-white/60 text-xs">Landing page for an event with a variety of functions from parallax scrolling, animations, etc.</p>
                   <div className="flex gap-2 mb-2 mt-3">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
                     <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
-                    <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" />
+                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" /> */}
                     <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
                     <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
                     <img src="/magic.png" className="w-12 h-12 pb-2 object-contain" alt="" />
                   </div>
-                  <a href="https://novalproperties.com/es/noval-awards" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <a href="https://novalproperties.com/es/noval-academy" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 
@@ -213,7 +243,7 @@ function App() {
                     <img src="/reactjs.png" className="w-18 h-8 object-contain" alt="" />
                     <img src="/vitejs.png" className="w-18 h-8 object-contain" alt="" />
                     <img src="/supabase.png" className="w-18 h-8 object-contain" alt="" />
-                    <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-8 h-8  object-contain" alt="" />
+                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-8 h-8  object-contain" alt="" /> */}
                   </div>
                   <a href="https://turistapp.netlify.app/auth/signin"><ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
 

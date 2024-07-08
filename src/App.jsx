@@ -55,9 +55,9 @@ function App() {
         <button className="text-3xl  fixed top-0 right-0 px-6 mt-4 hover:scale-125 ease-in" onClick={toggleDarkMode}><FaRegMoon /></button>
 
       </header>
-      <div className="main w-full px-5 xl:px-40 container  xl:gap-32 m-auto xl:grid xl:grid-cols-5 relative ">
+      <div className="main w-full px-5 xl:px-40 container m-auto   xl:gap-32 relative ">
 
-        <main className=" sm:px-0 pt-25 pb-20 col-span-3 ">
+        <main className=" sm:px-0 pt-25 pb-20 m-auto  max-w-[600px]">
 
           <div className="flex items-center flex-col sm:flex-row gap-10 pt-6 pb-4 sm:py-10 ">
             <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://avatars.githubusercontent.com/u/66282767?v=4" alt="" />
@@ -263,7 +263,7 @@ function App() {
 
         </main>
 
-        <div className="border-t border-purple-300 sm:border-none xl:sticky top-0 h-24 dark:border-t-white/20  xl:col-span-2">
+        {/* <div className="border-t border-purple-300 sm:border-none xl:sticky top-0 h-24 dark:border-t-white/20  xl:col-span-2">
           <div className="flex items-center gap-2 mt-10">
             <FaPaperPlane className="text-yellow-500 text-2xl" />
             <h2 className="text-2xl text-purple-500 font-semibold">Contact me</h2>
@@ -297,7 +297,7 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
 
       </div>

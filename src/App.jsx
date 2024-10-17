@@ -55,15 +55,16 @@ function App() {
         <button className="text-3xl  fixed top-0 right-0 px-6 mt-4 hover:scale-125 ease-in" onClick={toggleDarkMode}><FaRegMoon /></button>
 
       </header>
-      <div className="main w-full px-5 xl:px-40 container m-auto   xl:gap-32 relative ">
+      <div className="main w-full px-5 xl:px-40 container m-auto  pb-20 xl:gap-32 relative ">
 
-        <main className=" sm:px-0 pt-25 pb-20 m-auto  max-w-[600px]">
+        <main className=" sm:px-0 pt-25  m-auto  max-w-[600px]">
 
           <div className="flex items-center flex-col sm:flex-row gap-10 pt-6 pb-4 sm:py-10 ">
             <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://avatars.githubusercontent.com/u/66282767?v=4" alt="" />
             <div>
               <h2 className="mb-2 text-3xl text-purple-500 font-semibold text-center sm:text-start">Omar Méndez Torres</h2>
-              <p className="text-black/80 text-lg dark:text-white max-w-lg text-center sm:text-start text-balance sm:max-w-sm">A passionate frontend developer from Dominican republic ✨</p>
+                <p className="text-black/80 text-lg dark:text-white max-w-lg text-center sm:text-start text-balance sm:max-w-sm">A passionate Web Developer from Dominican republic  <img className="w-5 inline mb-1 ms-1" src="/dr.png" alt="" /></p>
+               
               <div className="pt-5 sm:pt-10 flex items-center gap-6 justify-center sm:justify-start">
                 <a target="_blank" href="https://github.com/omarmt29"><ButtonHead size='text-1xl' color={'bg-purple-400 text-white'} icon={<FaGithub />} text='Github' /></a>
                 <a target="_blank" href={cv}><ButtonHead size='text-1xl' color={'bg-orange-400 text-white'} icon={<FaUserTie />} text='Cv' /></a>
@@ -78,10 +79,50 @@ function App() {
 
             </div>
             <div className="mt-7">
+              <h3 className="dark:text-white">Web Developer ● Mercado Media Network</h3>
+              <div className="flex mt-1 items-center dark:text-purple-300 text-xs gap-1 mb-5">
+                <FaRegCalendarCheck />
+                <p className="">mar. 2024 - Current</p>
+              </div>
+              <ul className="flex list-disc flex-col pl-8 mt-3 gap-3">
+                <li className="dark:text-white/80">
+                  <p className="text-sm">
+                    Developing web applications using modern technologies like jQuery, JavaScript, ReactJS, and WordPress, tailored to meet specific project needs.
+                  </p>
+                </li>
+
+                <li className="dark:text-white/80">
+                  <p className="text-sm">
+                    Setting up efficient local development environments, allowing for rapid testing and adjustments to optimize delivery times.
+                  </p>
+                </li>
+
+                <li className="dark:text-white/80">
+                  <p className="text-sm">
+                    Implementing PHP solutions and customizing WordPress to provide advanced, client-specific functionalities.
+                  </p>
+                </li>
+
+                <li className="dark:text-white/80">
+                  <p className="text-sm">
+                    Managing version control through GitHub, ensuring effective collaboration and detailed project tracking.
+                  </p>
+                </li>
+
+                <li className="dark:text-white/80">
+                  <p className="text-sm">
+                    Performing SEO adjustments and comprehensive audits to improve search engine visibility and performance.
+                  </p>
+                </li>
+
+
+              </ul>
+            </div>
+            <div className="mt-12">
               <h3 className="dark:text-white">Web Developer ● Noval Properties</h3>
               <div className="flex mt-1 items-center dark:text-purple-300 text-xs gap-1 mb-5">
                 <FaRegCalendarCheck />
-                <p className="">7/1/2022 - Current</p>
+                <p className="">ago. 2022 - mar. 2024 · 1 año 8 meses</p>
               </div>
               <ul className="flex list-disc flex-col pl-8 mt-3 gap-3">
                 <li className="dark:text-white/80">
@@ -131,7 +172,7 @@ function App() {
               <ul className="flex list-disc flex-col pl-8 mt-3 gap-3">
                 <li className="dark:text-white/80">
                   <p className="text-sm">
-                  I am an expert in WordPress with extensive experience in creating <span className="dark:text-yellow-400 text-yellow-600 font-semibold">custom plugins</span>, <span className="dark:text-yellow-400 text-yellow-600 font-semibold">custom templates</span>, and advanced theme customization. I proficiently use PHP and JavaScript to develop bespoke functionalities and utilize tools like <span className="dark:text-yellow-400 text-yellow-600 font-semibold">ACF (Advanced Custom Fields)</span> and WooCommerce to extend WordPress capabilities. Additionally, I am well-versed in performance optimization and security, ensuring that websites are scalable and secure.
+                    I am an expert in WordPress with extensive experience in creating <span className="dark:text-yellow-400 text-yellow-600 font-semibold">custom plugins</span>, <span className="dark:text-yellow-400 text-yellow-600 font-semibold">custom templates</span>, and advanced theme customization. I proficiently use PHP and JavaScript to develop bespoke functionalities and utilize tools like <span className="dark:text-yellow-400 text-yellow-600 font-semibold">ACF (Advanced Custom Fields)</span> and WooCommerce to extend WordPress capabilities. Additionally, I am well-versed in performance optimization and security, ensuring that websites are scalable and secure.
                   </p>
                 </li>
                 <li className="dark:text-white/80">
@@ -160,20 +201,29 @@ function App() {
 
           </div>
 
-          <div className="border-t border-purple-300 mt-8 dark:border-t-white/20">
-            <div className="flex items-center gap-2 mt-10">
-              <FaRocket className="text-yellow-500 text-2xl" />
-              <h2 className="text-2xl text-purple-500 font-semibold">Projects</h2>
-
-            </div>
-
-        
 
 
+
+        </main>
+        <div className="border-t border-purple-300 mt-8 dark:border-t-white/20">
+          <div className="flex items-center gap-2 mt-10">
+            <FaRocket className="text-yellow-500 text-2xl" />
+            <h2 className="text-2xl text-purple-500 font-semibold">Projects</h2>
+
+          </div>
+
+
+
+
+
+        </div>
+
+        <div className="mt-8 gap-16 grid grid-cols-2  ">
+          <div className="col-span-2 sm:col-span-1">
             <div className="mt-8 gap-16 grid grid-cols-3 ">
 
 
-              <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
                 <div className="w-full h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/canino.png" alt="" />
                 </div>
@@ -184,7 +234,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
                 <div className="w-full h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/training.png" alt="" />
                 </div>
@@ -195,7 +245,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
                 <div className="w-full h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/noval.png" alt="" />
                 </div>
@@ -213,7 +263,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
                 <div className="w-full h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/academy.png" alt="" />
                 </div>
@@ -232,7 +282,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="col-span-3 sm:col-span-2 flex-col sm:flex-row flex">
+              {/* <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
                 <div className="w-full h-40">
                   <img className=" rounded-md object-cover w-full h-full  border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/turistapp3.png" alt="" />
                 </div>
@@ -243,12 +293,11 @@ function App() {
                     <img src="/reactjs.png" className="w-18 h-8 object-contain" alt="" />
                     <img src="/vitejs.png" className="w-18 h-8 object-contain" alt="" />
                     <img src="/supabase.png" className="w-18 h-8 object-contain" alt="" />
-                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-8 h-8  object-contain" alt="" /> */}
                   </div>
                   <a href="https://turistapp.netlify.app/auth/signin"><ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
 
                 </div>
-              </div>
+              </div> */}
 
 
 
@@ -256,48 +305,62 @@ function App() {
 
             </div>
 
-
           </div>
+          <div className="col-span-2 sm:col-span-1">
+            <div className="mt-8 gap-16 grid grid-cols-3 ">
 
 
-
-        </main>
-
-        {/* <div className="border-t border-purple-300 sm:border-none xl:sticky top-0 h-24 dark:border-t-white/20  xl:col-span-2">
-          <div className="flex items-center gap-2 mt-10">
-            <FaPaperPlane className="text-yellow-500 text-2xl" />
-            <h2 className="text-2xl text-purple-500 font-semibold">Contact me</h2>
-          </div>
-          <div className="form">
-            <div class="relative py-3 sm:max-w-xl mt-12 sm:mx-auto">
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-purple-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
-              </div>
-              <div class="relative px-4 py-10 bg-white/40 shadow-lg sm:rounded-3xl sm:p-8">
-                <div class="max-w-md mx-auto">
-                  <div class="divide-y divide-gray-200">
-                    <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                      <form ref={form} onSubmit={sendEmail} >
-                        {isChecked && <div className="check-animation"><FaCircleCheck className="text-green-300 text-[150px]" /></div>}
-                        <div class="relative mb-8">
-                          <input value={data.email} autocomplete="off" onChange={e => setdata({ ...data, email: e.target.value })} id="email" name="email" type="text" class="focus:bg-purple-800 focus:text-white peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600 bg-white/90 rounded-lg pl-3" placeholder="Email address" />
-                          <label for="email" class="absolute left-3 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-6 peer-focus:pl-0 peer-focus:text-gray-600  peer-focus:text-sm">Email Address</label>
-                        </div>
-                        <div class="relative">
-                          <textarea value={data.message} onChange={e => setdata({ ...data, message: e.target.value })} autocomplete="off" id="message" name="message" class=" py-2 focus:bg-purple-800 focus:text-white peer placeholder-transparent h-28  w-full border-b-2 border-gray-300 text-gray-900 bg-white/90 rounded-lg focus:outline-none focus:borer-rose-600 pl-3" placeholder="Password" />
-                          <label for="message" class="absolute left-3 -top-6 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-6 peer-focus:pl-0  peer-focus:text-gray-600 peer-focus:text-sm">Message</label>
-                        </div>
-                        <div class="relative flex justify-center mt-8 sm:mt-4">
-                          <button class="bg-white text-black hover:scale-110 transition-all ease-in rounded-md px-4 text-xl font-semibold py-1">Send</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
+                <div className="w-full h-40">
+                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/events.png" alt="" />
+                </div>
+                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
+                  <h3 className="dark:text-white font-semibold">Mercado Events</h3>
+                  <p className="dark:text-white/60 text-xs">Organizamos una gran variedad de rankings, premios y summits alrededor del año</p>
+                  <a href="https://revistamercado.do/events/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
+
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
+                <div className="w-full h-40">
+                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/tbodr.png" alt="" />
+                </div>
+                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
+                  <h3 className="dark:text-white font-semibold">The best of dr</h3>
+                  <p className="dark:text-white/60 text-xs">Te ofrecemos una selección especial con los tesoros más destacados de todo el país.</p>
+                  <a href="https://thebestofdr.do/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                </div>
+              </div>
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
+                <div className="w-full h-40">
+                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/winners.png" alt="" />
+                </div>
+                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
+                  <h3 className="dark:text-white font-semibold">Winners 2024</h3>
+                  <p className="dark:text-white/60 text-xs">Cada año disfrutamos de una selección de los personajes y proyectos que nos hacen sentir orgullosos de ser dominicanos.</p>
+                  <a href="https://thebestofdr.do/winner-2024/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                </div>
+              </div>
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
+                <div className="w-full h-40">
+                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/elitehub.png" alt="" />
+                </div>
+                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
+                  <h3 className="dark:text-white font-semibold">EliteHub</h3>
+                  <p className="dark:text-white/60 text-xs">Somos la plataforma que conecta a tu marca con una audiencia comprometida.</p>
+                  <a href="https://revistamercado.do/elitehub/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                </div>
+              </div>
+
+
+
+
+
             </div>
           </div>
-        </div> */}
+        </div>
+
+
 
 
       </div>

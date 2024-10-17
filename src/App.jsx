@@ -219,12 +219,12 @@ function App() {
         </div>
 
         <div className="mt-8 gap-16 grid grid-cols-2  ">
-          <div className="col-span-2 sm:col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <div className="mt-8 gap-16 grid grid-cols-3 ">
 
 
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-40">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/canino.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
@@ -235,7 +235,7 @@ function App() {
               </div>
 
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-40">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/training.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
@@ -246,7 +246,7 @@ function App() {
               </div>
 
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-40">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/noval.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
@@ -264,7 +264,7 @@ function App() {
               </div>
 
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-40">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/academy.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
@@ -283,7 +283,7 @@ function App() {
               </div>
 
               {/* <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-40">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full  border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/turistapp3.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
@@ -306,12 +306,12 @@ function App() {
             </div>
 
           </div>
-          <div className="col-span-2 sm:col-span-1">
+          <div className="col-span-2 md:col-span-1">
             <div className="mt-8 gap-16 grid grid-cols-3 ">
 
 
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-40">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/events.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
@@ -322,7 +322,7 @@ function App() {
               </div>
 
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-40">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/tbodr.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
@@ -332,7 +332,7 @@ function App() {
                 </div>
               </div>
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-40">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/winners.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
@@ -342,7 +342,7 @@ function App() {
                 </div>
               </div>
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-40">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/elitehub.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">

@@ -4,7 +4,7 @@
 
 
 .dark body {
-	background: linear-gradient(90deg, rgb(27 27 27) 0%, rgba(29, 40, 53, 1) 21%, rgb(20 32 47) 48%, rgba(29, 40, 53, 1) 86%, rgb(29 29 29) 101%);
+    background: linear-gradient(90deg, rgb(22 2 42) 0%, rgb(24 12 36) 21%, rgb(9 0 18) 48%, rgb(24 10 39) 86%, rgb(24 2 47) 101%);
 }
 
 body {

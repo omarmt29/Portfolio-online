@@ -65,7 +65,7 @@ function App() {
           <div className="flex items-center flex-col sm:flex-row gap-10 pt-6 pb-4 sm:py-10 ">
             <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://avatars.githubusercontent.com/u/66282767?v=4" alt="" />
             <div>
-              <h2 className="mb-2 text-3xl text-purple-500 font-semibold text-center sm:text-start">Omar Méndez Torres</h2>
+              <h2 className="mb-2 text-3xl text-purple-500 font-semibold text-xl text-center sm:text-start">Omar Méndez Torres</h2>
               <p className="text-black/80 text-lg dark:text-white max-w-lg text-center sm:text-start text-balance sm:max-w-sm">A passionate Web Developer from Dominican republic  <img className="w-5 inline mb-1 ms-1" src="/dr.png" alt="" /></p>
 
               <div className="pt-5 sm:pt-10 flex items-center gap-6 justify-center sm:justify-start">
@@ -95,7 +95,7 @@ function App() {
         <div className="border-t border-purple-30/40 mt-8 dark:border-t-white/10">
           {/* <div className="flex items-center gap-2 mt-10">
             <FaRocket className="text-yellow-500 text-2xl" />
-            <h2 className="text-2xl text-purple-500 font-semibold">Projects</h2>
+            <h2 className="text-2xl text-purple-500 font-semibold text-xl">Projects</h2>
 
           </div> */}
 
@@ -115,9 +115,9 @@ function App() {
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/canino.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">Il Canino Pet Spa</h3>
-                  <p className="dark:text-white/60 text-xs">Il Canino se compromete a ofrecer servicios personalizados de peluquería y veterinaria, promoviendo la salud y el bienestar de nuestros amigos de cuatro patas.</p>
-                  <a href="https://ilcaninopetspa.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <h3 className="dark:text-white font-semibold text-xl">Il Canino Pet Spa</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">Il Canino se compromete a ofrecer servicios personalizados de peluquería y veterinaria, promoviendo la salud y el bienestar de nuestros amigos de cuatro patas.</p>
+                  <a href="https://ilcaninopetspa.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 
@@ -126,9 +126,9 @@ function App() {
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/training.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">Training With Stella</h3>
-                  <p className="dark:text-white/60 text-xs">Entrena a tu perro hoy para disfrutar de una vida juntos llena de felicidad</p>
-                  <a href="https://trainingwithstella.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <h3 className="dark:text-white font-semibold text-xl">Training With Stella</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">Entrena a tu perro hoy para disfrutar de una vida juntos llena de felicidad</p>
+                  <a href="https://trainingwithstella.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 
@@ -137,8 +137,8 @@ function App() {
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/noval.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">Noval Properties</h3>
-                  <p className="dark:text-white/60 text-xs">It's a corporate website for a real estate developer</p>
+                  <h3 className="dark:text-white font-semibold text-xl">Noval Properties</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">It's a corporate website for a real estate developer</p>
                   <div className="flex gap-2 mb-2 mt-3">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
                     <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
@@ -146,7 +146,7 @@ function App() {
                     <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
                     <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
                   </div>
-                  <a href="https://novalproperties.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <a href="https://novalproperties.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 
@@ -155,8 +155,8 @@ function App() {
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/academy.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">Noval Academy</h3>
-                  <p className="dark:text-white/60 text-xs">Landing page for an event with a variety of functions from parallax scrolling, animations, etc.</p>
+                  <h3 className="dark:text-white font-semibold text-xl">Noval Academy</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">Landing page for an event with a variety of functions from parallax scrolling, animations, etc.</p>
                   <div className="flex gap-2 mb-2 mt-3">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
                     <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
@@ -165,7 +165,7 @@ function App() {
                     <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
                     <img src="/magic.png" className="w-12 h-12 pb-2 object-contain" alt="" />
                   </div>
-                  <a href="https://novalproperties.com/es/noval-academy" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <a href="https://novalproperties.com/es/noval-academy" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 
@@ -174,14 +174,14 @@ function App() {
                   <img className=" rounded-md object-cover w-full h-full  border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/turistapp3.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">TuristApp</h3>
-                  <p className="dark:text-white/60 text-xs">It's a web application for managing tourist activities, clients, and schedules</p>
+                  <h3 className="dark:text-white font-semibold text-xl">TuristApp</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">It's a web application for managing tourist activities, clients, and schedules</p>
                   <div className="flex items-end gap-2 mb-4 mt-5">
                     <img src="/reactjs.png" className="w-18 h-8 object-contain" alt="" />
                     <img src="/vitejs.png" className="w-18 h-8 object-contain" alt="" />
                     <img src="/supabase.png" className="w-18 h-8 object-contain" alt="" />
                   </div>
-                  <a href="https://turistapp.netlify.app/auth/signin"><ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <a href="https://turistapp.netlify.app/auth/signin"><ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
 
                 </div>
               </div> */}
@@ -202,9 +202,9 @@ function App() {
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/events.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">Mercado Events</h3>
-                  <p className="dark:text-white/60 text-xs">Organizamos una gran variedad de rankings, premios y summits alrededor del año</p>
-                  <a href="https://revistamercado.do/events/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <h3 className="dark:text-white font-semibold text-xl">Mercado Events</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">Organizamos una gran variedad de rankings, premios y summits alrededor del año</p>
+                  <a href="https://revistamercado.do/events/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 
@@ -213,9 +213,9 @@ function App() {
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/tbodr.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">The best of dr</h3>
-                  <p className="dark:text-white/60 text-xs">Te ofrecemos una selección especial con los tesoros más destacados de todo el país.</p>
-                  <a href="https://thebestofdr.do/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <h3 className="dark:text-white font-semibold text-xl">The best of dr</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">Te ofrecemos una selección especial con los tesoros más destacados de todo el país.</p>
+                  <a href="https://thebestofdr.do/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
@@ -223,9 +223,9 @@ function App() {
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/winners.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">Winners 2024</h3>
-                  <p className="dark:text-white/60 text-xs">Cada año disfrutamos de una selección de los personajes y proyectos que nos hacen sentir orgullosos de ser dominicanos.</p>
-                  <a href="https://thebestofdr.do/winner-2024/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <h3 className="dark:text-white font-semibold text-xl">Winners 2024</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">Cada año disfrutamos de una selección de los personajes y proyectos que nos hacen sentir orgullosos de ser dominicanos.</p>
+                  <a href="https://thebestofdr.do/winner-2024/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
@@ -233,9 +233,9 @@ function App() {
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/elitehub.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold">EliteHub</h3>
-                  <p className="dark:text-white/60 text-xs">Somos la plataforma que conecta a tu marca con una audiencia comprometida.</p>
-                  <a href="https://revistamercado.do/elitehub/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-xs' text='Live' icon={<FaLink />} /></a>
+                  <h3 className="dark:text-white font-semibold text-xl">EliteHub</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">Somos la plataforma que conecta a tu marca con una audiencia comprometida.</p>
+                  <a href="https://revistamercado.do/elitehub/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
 

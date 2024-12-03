@@ -111,7 +111,7 @@ function App() {
 
         </div>
 
-        <div className="mt-8 gap-16 grid grid-cols-2  ">
+        <div className="sm:mt-7 gap-16 grid grid-cols-2  ">
           <div className="col-span-2 md:col-span-1">
             <div className="mt-8 gap-16 grid grid-cols-3 ">
 

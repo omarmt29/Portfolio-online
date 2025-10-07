@@ -72,7 +72,7 @@ function App() {
             <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://avatars.githubusercontent.com/u/66282767?v=4" alt="" />
             <div>
               <h2 className="mb-2 text-3xl text-purple-500 font-semibold text-xl text-center sm:text-start">Omar Méndez Torres</h2>
-              <p className="text-black/80 text-lg dark:text-white max-w-lg text-center sm:text-start pb-4 sm:pb-0 text-balance sm:max-w-sm max-w-[230px]">A passionate Web Developer from Dominican republic  <img className="w-5 inline mb-1 ms-1" src="/dr.png" alt="" /></p>
+              <p className="text-black/80 text-lg dark:text-white max-w-lg text-center sm:text-start pb-4 sm:pb-0 text-balance sm:max-w-sm max-w-[230px]">A Senior Web Developer from Dominican republic  <img className="w-5 inline mb-1 ms-1" src="/dr.png" alt="" /></p>
 
               <div className=" sm:pt-5 flex items-center gap-6 justify-center sm:justify-start pb-4 sm:pb-0">
                 <a target="_blank" href="https://github.com/omarmt29"><ButtonHead size='text-1xl' color={'bg-purple-400 text-white'} icon={<FaGithub />} text='Github' /></a>
@@ -81,7 +81,7 @@ function App() {
             </div>
           </div>
 
-          <p className="text-black bg-black/5 dark:text-white text-center dark:bg-white/5 p-5 rounded">Desarrollador de software con más de 3 años de experiencia en proyectos web, especializado en frontend y con conocimientos en backend. He trabajado en proyectos personales y de terceros, enfrentando desafíos que han fortalecido mis habilidades técnicas y profesionales.</p>
+          <p className="text-black bg-black/5 dark:text-white text-center dark:bg-white/5 p-5 rounded">Desarrollador de software con más de 5 años de experiencia en proyectos web, especializado en frontend y con conocimientos en backend. He trabajado en proyectos personales y de terceros, enfrentando desafíos que han fortalecido mis habilidades técnicas y profesionales.</p>
 
 
 

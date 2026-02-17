@@ -14,31 +14,6 @@ function App() {
   const [data, setdata] = useState({ email: '', message: '' })
   const [emblaRef] = useEmblaCarousel({ loop: true });
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    // service_id, templte_id and public key will get from Emailjs website when you create account and add template service and email service 
-    console.log(data.email.length)
-    if (data.email.length == 0 || data.message.length == 0) {
-      alert('Por favor, completa los campos')
-    } else {
-      emailjs.sendForm('service_6asee9h', 'template_n2xeigm', form.current,
-        'PRMD9SU60NX1m1aPz')
-        .then((result) => {
-          setIsChecked(true);
-
-          // Restablecer isChecked después de un tiempo para permitir múltiples clics
-          setTimeout(() => {
-            setIsChecked(false);
-            setdata({ email: '', message: '' });
-          }, 1500);
-          console.log(result.text);
-        }, (error) => {
-          console.log(error.text);
-        });
-    }
-  };
-
-
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
     localStorage.setItem('darkMode', darkMode);
@@ -56,23 +31,19 @@ function App() {
 
   return (
     <>
-      <header className="max-w-3xl py-6 m-auto  dark:text-white relative w-full ">
 
-        <button className="text-3xl  fixed top-0 right-0 px-6 mt-4 hover:scale-125 ease-in" onClick={toggleDarkMode}><FaRegMoon /></button>
-
-      </header>
       <div className="main w-full px-5 xl:px-40 container m-auto  pb-20 xl:gap-32 relative ">
 
 
 
 
-        <main className=" sm:px-0 pt-25  m-auto  max-w-[700px]">
+        <main className=" sm:px-0 pt-25  m-auto  max-w-[900px]">
 
-          <div className="flex items-center flex-col sm:flex-row gap-10 pt-6 pb-4 sm:py-10 ">
-            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://avatars.githubusercontent.com/u/66282767?v=4" alt="" />
+          <div className="flex items-center flex-col sm:flex-row justify-center m-auto gap-10 pt-6 pb-4 sm:py-10 ">
+            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://mendez-online.netlify.app/ia-image.png" alt="" />
             <div>
-              <h2 className="mb-2 text-3xl text-purple-500 font-semibold text-xl text-center sm:text-start">Omar Méndez Torres</h2>
-              <p className="text-black/80 text-lg dark:text-white max-w-lg text-center sm:text-start pb-4 sm:pb-0 text-balance sm:max-w-sm max-w-[230px]">A Senior Web Developer from Dominican republic  <img className="w-5 inline mb-1 ms-1" src="/dr.png" alt="" /></p>
+              <h2 className="mb-1 text-3xl text-purple-500 font-semibold text-xl text-center sm:text-start">Omar Méndez Torres</h2>
+              <p className="text-black/80 text-md dark:text-white max-w-lg text-center sm:text-start pb-4 sm:pb-0 text-balance sm:max-w-sm max-w-[230px]">Senior Web Developer <img className="w-5 inline mb-1 ms-1" src="/dr.png" alt="" /></p>
 
               <div className=" sm:pt-5 flex items-center gap-6 justify-center sm:justify-start pb-4 sm:pb-0">
                 <a target="_blank" href="https://github.com/omarmt29"><ButtonHead size='text-1xl' color={'bg-purple-400 text-white'} icon={<FaGithub />} text='Github' /></a>
@@ -81,7 +52,12 @@ function App() {
             </div>
           </div>
 
-          <p className="text-black bg-black/5 dark:text-white text-center dark:bg-white/5 p-5 rounded">Desarrollador de software con más de 5 años de experiencia en proyectos web, especializado en frontend y con conocimientos en backend. He trabajado en proyectos personales y de terceros, enfrentando desafíos que han fortalecido mis habilidades técnicas y profesionales.</p>
+          <p className="text-black bg-black/5 dark:text-white text-center dark:bg-white/5 p-5 rounded">Desarrollador de software con más de 4 años de experiencia en desarrollo backend y
+            frontend, administración de servidores y liderazgo técnico. Amplio dominio de tecnologías
+            como PHP (Laravel), Astro, React, PL/SQL, Docker, APIs REST y WordPress. Proactivo,
+            resolutivo y orientado a resultados, con capacidad para realizar proyectos, implementar
+            soluciones eficientes y trabajar en entornos colaborativos.
+          </p>
 
 
 
@@ -128,6 +104,24 @@ function App() {
 
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
                 <div className="w-full h-full sm:h-40">
+                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/academy.png" alt="" />
+                </div>
+                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
+                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Noval Academy</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">Landing page for an event with a variety of functions from parallax scrolling, animations, etc.</p>
+                  <div className="flex gap-2 mb-2 mt-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
+                    <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
+                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" /> */}
+                    <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
+                    <img src="/magic.png" className="w-12 h-12 pb-2 object-contain" alt="" />
+                  </div>
+                  <a href="https://novalproperties.com/es/noval-academy" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
+                </div>
+              </div>
+
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
+                <div className="w-full h-full sm:h-40">
                   <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/canino.png" alt="" />
                 </div>
                 <div className="sm:pl-4 w-full mt-4 sm:mt-0">
@@ -148,42 +142,6 @@ function App() {
                 </div>
               </div>
 
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/noval.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Noval Properties</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">It's a corporate website for a real estate developer</p>
-                  <div className="flex gap-2 mb-2 mt-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
-                    <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
-                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" /> */}
-                    <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
-                    <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
-                  </div>
-                  <a href="https://novalproperties.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/academy.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Noval Academy</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">Landing page for an event with a variety of functions from parallax scrolling, animations, etc.</p>
-                  <div className="flex gap-2 mb-2 mt-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
-                    <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
-                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" /> */}
-                    <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
-                    <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo-600x311.png" className="w-10 h-10 pb-2 object-contain" alt="" />
-                    <img src="/magic.png" className="w-12 h-12 pb-2 object-contain" alt="" />
-                  </div>
-                  <a href="https://novalproperties.com/es/noval-academy" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
 
               {/* <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
                 <div className="w-full h-full sm:h-40">
@@ -232,6 +190,24 @@ function App() {
                   <h3 className="dark:text-white font-semibold text-xl mb-2 ">The best of dr</h3>
                   <p className="dark:text-white/60 text-[0.9rem]">Te ofrecemos una selección especial con los tesoros más destacados de todo el país.</p>
                   <a href="https://thebestofdr.do/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
+                </div>
+              </div>
+
+
+              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
+                <div className="w-full h-full sm:h-40">
+                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/noval.png" alt="" />
+                </div>
+                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
+                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Noval Properties</h3>
+                  <p className="dark:text-white/60 text-[0.9rem]">It's a corporate website for a real estate developer</p>
+                  <div className="flex gap-2 mb-2 mt-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
+                    <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
+                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" /> */}
+                    <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
+                  </div>
+                  <a href="https://novalproperties.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
                 </div>
               </div>
               <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">

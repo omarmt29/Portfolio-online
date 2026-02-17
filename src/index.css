@@ -3,12 +3,10 @@
 @tailwind utilities;
 
 
-.dark body {
-    background: linear-gradient(90deg, rgb(22 2 42) 0%, rgb(24 12 36) 21%, rgb(9 0 18) 48%, rgb(24 10 39) 86%, rgb(24 2 47) 101%);
-}
+
 
 body {
-	background: linear-gradient(90deg, rgb(234 224 243 / 55%) 0%, rgb(255 255 255) 21%, rgba(240, 211, 48, 0.09) 48%, rgb(255 255 255) 86%, rgb(220 211 230 / 55%) 101%);
+	 background: rgb(19, 19, 19);
 }
 
 @keyframes show {

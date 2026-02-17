@@ -40,7 +40,7 @@ function App() {
         <main className=" sm:px-0 pt-25  m-auto  max-w-[900px]">
 
           <div className="flex items-center flex-col sm:flex-row justify-center m-auto gap-10 pt-6 pb-4 sm:py-10 ">
-            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://mendez-online.netlify.app/ia-image.png" alt="" />
+            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://mendez-online.netlify.app/ia-image.png" style={{objectPosition: "top"}} alt="" />
             <div>
               <h2 className="mb-1 text-3xl text-purple-500 font-semibold text-xl text-center sm:text-start">Omar Méndez Torres</h2>
               <p className="text-black/80 text-md dark:text-white max-w-lg text-center sm:text-start pb-4 sm:pb-0 text-balance sm:max-w-sm max-w-[230px]">Senior Web Developer <img className="w-5 inline mb-1 ms-1" src="/dr.png" alt="" /></p>

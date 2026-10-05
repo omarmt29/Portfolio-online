@@ -1,10 +1,79 @@
 import { useEffect, useState } from "react";
 import { FaGithub, FaUserTie, FaRegMoon, FaSuitcase, FaRocket, FaGears, FaRegCalendarCheck, FaLink, FaPaperPlane, FaCircleCheck } from "react-icons/fa6";
 import { ButtonHead } from '../src/components/ButtonHead'
-import cv from "../public/omar-2026.pdf"
+import { ProjectCard } from '../src/components/ProjectCard'
 import emailjs from '@emailjs/browser';
 import React, { useRef } from 'react';
 import useEmblaCarousel from "embla-carousel-react";
+
+const projects = [
+  {
+    title: "Botycheck.com",
+    description: "Plataforma de inspección vehicular profesional: consulta por VIN y evaluaciones técnicas con informe confiable.",
+    image: "/botycheck.jpg",
+    url: "https://botycheck.com",
+    stack: [{ src: "https://laravel.com/img/logotype.min.svg", alt: "Laravel" }],
+  },
+  {
+    title: "Mercado Events",
+    description: "Organizamos una gran variedad de rankings, premios y summits alrededor del año.",
+    image: "/events.png",
+    url: "https://revistamercado.do/events/",
+  },
+  {
+    title: "Noval Properties",
+    description: "It's a corporate website for a real estate developer.",
+    image: "/noval.png",
+    url: "https://novalproperties.com/",
+    stack: [
+      { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png", alt: "PHP" },
+      { src: "https://laravel.com/img/logotype.min.svg", alt: "Laravel" },
+      { src: "https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png", alt: "jQuery", className: "bg-gray-700 rounded" },
+    ],
+  },
+  {
+    title: "SalvamentosRD",
+    description: "Salvamento RD es líder en la venta de vehículos, salvamentos y piezas de repuesto.",
+    image: "/salvamentosrd.png",
+    url: "https://salvamentosrd.com/",
+  },
+  {
+    title: "The best of dr",
+    description: "Te ofrecemos una selección especial con los tesoros más destacados de todo el país.",
+    image: "/tbodr.png",
+    url: "https://thebestofdr.do/",
+  },
+  {
+    title: "Portal estadístico SISALRIL",
+    description: "Portal de indicadores y datos estadísticos del Seguro Familiar de Salud y el Seguro de Riesgos Laborales.",
+    image: "/sisalril.png",
+    url: "https://redatam.sisalril.gob.do/",
+  },
+  {
+    title: "Winners 2024",
+    description: "Cada año disfrutamos de una selección de los personajes y proyectos que nos hacen sentir orgullosos de ser dominicanos.",
+    image: "/winners.png",
+    url: "https://thebestofdr.do/winner-2024/",
+  },
+  {
+    title: "EliteHub",
+    description: "Somos la plataforma que conecta a tu marca con una audiencia comprometida.",
+    image: "/elitehub.png",
+    url: "https://revistamercado.do/elitehub/",
+  },
+  {
+    title: "Il Canino Pet Spa",
+    description: "Il Canino se compromete a ofrecer servicios personalizados de peluquería y veterinaria.",
+    image: "/canino.png",
+    url: "https://ilcaninopetspa.com/",
+  },
+  {
+    title: "Training With Stella",
+    description: "Entrena a tu perro hoy para disfrutar de una vida juntos llena de felicidad.",
+    image: "/training.png",
+    url: "https://trainingwithstella.com/",
+  },
+];
 
 function App() {
 
@@ -40,14 +109,14 @@ function App() {
         <main className=" sm:px-0 pt-25  m-auto  max-w-[900px]">
 
           <div className="flex items-center flex-col sm:flex-row justify-center m-auto gap-10 pt-6 pb-4 sm:py-10 ">
-            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="https://mendez-online.netlify.app/ia-image.png" style={{objectPosition: "top"}} alt="" />
+            <img className="w-40 h-40 animate-pulse object-cover rounded-full border-4 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/avatar.jpg" style={{objectPosition: "center"}} alt="Omar Méndez Torres" />
             <div>
               <h2 className="mb-1 text-3xl text-purple-500 font-semibold text-xl text-center sm:text-start">Omar Méndez Torres</h2>
               <p className="text-black/80 text-md dark:text-white max-w-lg text-center sm:text-start pb-4 sm:pb-0 text-balance sm:max-w-sm max-w-[230px]">Senior Web Developer <img className="w-5 inline mb-1 ms-1" src="/dr.png" alt="" /></p>
 
               <div className=" sm:pt-5 flex items-center gap-6 justify-center sm:justify-start pb-4 sm:pb-0">
                 <a target="_blank" href="https://github.com/omarmt29"><ButtonHead size='text-1xl' color={'bg-purple-400 text-white'} icon={<FaGithub />} text='Github' /></a>
-                <a target="_blank" href={cv}><ButtonHead size='text-1xl' color={'bg-orange-400 text-white'} icon={<FaUserTie />} text='Cv' /></a>
+                <a target="_blank" href="/omar%20M%20cv%20ES.pdf"><ButtonHead size='text-1xl' color={'bg-orange-400 text-white'} icon={<FaUserTie />} text='Cv' /></a>
               </div>
             </div>
           </div>
@@ -74,170 +143,18 @@ function App() {
           <svg className="w-[60px] " viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="16" cy="16" r="14" fill="#028CB0"></circle> <path d="M6.45538 16C6.45538 19.7823 8.65538 23.04 11.8369 24.5885L7.28462 12.1162C6.73798 13.338 6.45541 14.6615 6.45538 16ZM16 25.5446C17.1085 25.5446 18.1746 25.35 19.1731 25.0031L19.1054 24.8762L16.1692 16.8377L13.3092 25.1554C14.1554 25.4092 15.0608 25.5446 16 25.5446ZM17.3115 11.5238L20.7638 21.7877L21.72 18.6062C22.1262 17.2862 22.4392 16.3385 22.4392 15.5177C22.4392 14.3331 22.0162 13.5208 21.6608 12.8946C21.17 12.0992 20.7215 11.4308 20.7215 10.6523C20.7215 9.77231 21.3815 8.96 22.3292 8.96H22.4477C20.689 7.34546 18.3874 6.45141 16 6.45538C14.4192 6.45509 12.8632 6.84777 11.4718 7.59809C10.0805 8.34842 8.89746 9.43285 8.02923 10.7538L8.63846 10.7708C9.63692 10.7708 11.1769 10.6438 11.1769 10.6438C11.7015 10.6185 11.7608 11.3715 11.2446 11.4308C11.2446 11.4308 10.7285 11.4985 10.1446 11.5238L13.6308 21.8638L15.7208 15.6023L14.2315 11.5238C13.898 11.5054 13.565 11.4772 13.2331 11.4392C12.7169 11.4054 12.7762 10.6185 13.2923 10.6438C13.2923 10.6438 14.8662 10.7708 15.8054 10.7708C16.8038 10.7708 18.3438 10.6438 18.3438 10.6438C18.86 10.6185 18.9277 11.3715 18.4115 11.4308C18.4115 11.4308 17.8954 11.49 17.3115 11.5238ZM20.7977 24.25C22.2416 23.4104 23.4399 22.2066 24.2729 20.7589C25.1059 19.3112 25.5444 17.6703 25.5446 16C25.5446 14.3415 25.1215 12.7846 24.3769 11.4223C24.5281 12.9211 24.3012 14.4339 23.7169 15.8223L20.7977 24.25ZM16 27C13.0826 27 10.2847 25.8411 8.22183 23.7782C6.15893 21.7153 5 18.9174 5 16C5 13.0826 6.15893 10.2847 8.22183 8.22183C10.2847 6.15893 13.0826 5 16 5C18.9174 5 21.7153 6.15893 23.7782 8.22183C25.8411 10.2847 27 13.0826 27 16C27 18.9174 25.8411 21.7153 23.7782 23.7782C21.7153 25.8411 18.9174 27 16 27Z" fill="white"></path> </g></svg>
         </div>
 
-        <div className="border-t border-purple-30/40 mt-8 dark:border-t-white/10">
-          {/* <div className="flex items-center gap-2 mt-10">
-            <FaRocket className="text-yellow-500 text-2xl" />
-            <h2 className="text-2xl text-purple-500 font-semibold text-xl">Projects</h2>
-
-          </div> */}
-
-
-
-
-
-        </div>
-
-        <div className="sm:mt-7 gap-16 grid grid-cols-2  ">
-          <div className="col-span-2 md:col-span-1">
-            <div className="mt-8 gap-16 grid grid-cols-3 ">
-
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/salvamentosrd.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <a href="https://salvamentosrd.com/" target="_blank"> <h3 className="dark:text-white font-semibold text-xl mb-2">SalvamentosRD</h3> </a>
-                  <p className="dark:text-white/60 text-[0.9rem]">Salvamento RD es líder en la venta de vehículos, salvamentos y piezas de repuesto.</p>
-                  <a href="https://salvamentosrd.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/academy.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Noval Academy</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">Landing page for an event with a variety of functions from parallax scrolling, animations, etc.</p>
-                  <div className="flex gap-2 mb-2 mt-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
-                    <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
-                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" /> */}
-                    <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
-                    <img src="/magic.png" className="w-12 h-12 pb-2 object-contain" alt="" />
-                  </div>
-                  <a href="https://novalproperties.com/es/noval-academy" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/canino.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Il Canino Pet Spa</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">Il Canino se compromete a ofrecer servicios personalizados de peluquería y veterinaria.</p>
-                  <a href="https://ilcaninopetspa.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/training.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Training With Stella</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">Entrena a tu perro hoy para disfrutar de una vida juntos llena de felicidad</p>
-                  <a href="https://trainingwithstella.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-
-
-              {/* <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full  border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/turistapp3.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">TuristApp</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">It's a web application for managing tourist activities, clients, and schedules</p>
-                  <div className="flex items-end gap-2 mb-4 mt-5">
-                    <img src="/reactjs.png" className="w-18 h-8 object-contain" alt="" />
-                    <img src="/vitejs.png" className="w-18 h-8 object-contain" alt="" />
-                    <img src="/supabase.png" className="w-18 h-8 object-contain" alt="" />
-                  </div>
-                  <a href="https://turistapp.netlify.app/auth/signin"><ButtonHead color='float-right sm:float-none bg-purple-400 text-white' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-
-                </div>
-              </div> */}
-
-
-
-
-
-            </div>
-
+        <section className="mt-10 border-t border-purple-30/40 pt-10 dark:border-t-white/10">
+          <div className="mb-8 flex items-center gap-2">
+            <FaRocket className="text-yellow-500 text-xl" />
+            <h2 className="text-2xl font-semibold text-purple-500">Projects</h2>
           </div>
-          <div className="col-span-2 md:col-span-1">
-            <div className="mt-8 gap-16 grid grid-cols-3 ">
 
-
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/events.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Mercado Events</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">Organizamos una gran variedad de rankings, premios y summits alrededor del año</p>
-                  <a href="https://revistamercado.do/events/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/tbodr.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">The best of dr</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">Te ofrecemos una selección especial con los tesoros más destacados de todo el país.</p>
-                  <a href="https://thebestofdr.do/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-
-
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/noval.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Noval Properties</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">It's a corporate website for a real estate developer</p>
-                  <div className="flex gap-2 mb-2 mt-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png" className="w-10 h-10 object-contain" alt="" />
-                    <img src="https://laravel.com/img/logotype.min.svg" className="w-10 h-10 object-contain" alt="" />
-                    {/* <img src="https://www.orientsoftware.com/Themes/OrientSoftwareTheme/Content/Images/blog/2021-12-16/what-can-you-do-with-javascript.jpg" className="w-7 h-7 object-contain" alt="" /> */}
-                    <img src="https://jquery.com/wp-content/themes/jquery/images/logo-jquery.png" className="w-10 h-10 object-contain bg-gray-700" alt="" />
-                  </div>
-                  <a href="https://novalproperties.com/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/winners.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">Winners 2024</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">Cada año disfrutamos de una selección de los personajes y proyectos que nos hacen sentir orgullosos de ser dominicanos.</p>
-                  <a href="https://thebestofdr.do/winner-2024/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-              <div className="col-span-3 sm:col-span-3 flex-col sm:flex-row flex">
-                <div className="w-full h-full sm:h-40">
-                  <img className=" rounded-md object-cover w-full h-full   border-2 border-yellow-500 shadow-purple-500 shadow-md  p-1" src="/elitehub.png" alt="" />
-                </div>
-                <div className="sm:pl-4 w-full mt-4 sm:mt-0">
-                  <h3 className="dark:text-white font-semibold text-xl mb-2 ">EliteHub</h3>
-                  <p className="dark:text-white/60 text-[0.9rem]">Somos la plataforma que conecta a tu marca con una audiencia comprometida.</p>
-                  <a href="https://revistamercado.do/elitehub/" target="_blank"> <ButtonHead color='float-right sm:float-none bg-purple-400 text-white px-3 mt-4 py-1' size='sm:text-[0.9rem]' text='Live' icon={<FaLink />} /></a>
-                </div>
-              </div>
-
-
-
-
-
-            </div>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 sm:gap-y-10">
+            {projects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
           </div>
-        </div>
+        </section>
 
 
 
